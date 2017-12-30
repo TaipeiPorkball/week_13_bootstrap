@@ -1,0 +1,111 @@
+@font-face {
+  font-family: Yuan;
+  src: url("../font/GenJyuuGothic-Normal.ttf");
+}
+body
+{
+  background-color: #F0F2F5;
+  font-family: Yuan;
+}
+.navbar
+{
+  background-color: #041528;
+}
+
+.navbar-brand
+{
+  background-color: #364453;
+  width:160px;
+  height:32px;
+}
+.navbar-toggle
+{
+  width:16px;
+  height:16px;
+  background-color: inherit;
+}
+.navbar-toggle span{
+  width:16px;
+  height:3px;
+  margin-bottom:3px;
+  background-color:#979797;
+  transform: rotate(0deg);
+  transition: .7s ease-in-out;
+}
+
+.navbar-toggle span:nth-child(1) {
+  -webkit-transform-origin:right center;
+  transform-origin: right center;
+}
+
+.navbar-toggle span:nth-child(2) {
+  -webkit-transform-origin:right center;
+  transform-origin: right center;
+}
+
+.navbar-toggle span:nth-child(3) {
+  -webkit-transform-origin:right center;
+  transform-origin: right center;
+}
+
+.navbar-toggle.open span:nth-child(1) {
+  -webkit-transform: translate(-3px, -2px) rotate(-48deg);
+  transform: translate(-3px, -2px) rotate(-48deg);
+}
+
+.navbar-toggle.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.navbar-toggle.open span:nth-child(3) {
+  -webkit-transform:translate(-3px, -2px) rotate(48deg);
+  transform: translate(-3px, -2px) rotate(48deg);
+}
+.nav-item
+{
+  height:64px;
+  font-size:20px;
+  padding:6px 19px 13px;
+}
+.nav-item:hover
+{
+  transition: 1s ease-in;
+  background-color: #4090F7;
+}
+
+.flip {
+  height: 200px;
+  perspective:2000px;
+}
+
+.block {
+  height: 200px;
+  perspective:2000px;
+  transition: transform 1.5s ease-out;
+  transform-style: preserve-3d;
+  position: relative;
+  cursor:pointer;
+}
+
+.block div {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.block .surface {
+  background-color: #FFF;
+}
+
+.block .backface {
+  background:url("../img/65076843_p0.png");
+  background-position: left top;
+  transform: rotateY( 180deg );
+}
+
+.block:hover{
+  transform: rotateY( 180deg );
+}
